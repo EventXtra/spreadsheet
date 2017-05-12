@@ -54,8 +54,6 @@ class Worksheet
     def type
       if @format && (@format.date? || @format.time?)
         :date
-      elsif @value.is_a?(Numeric)
-        :numeric
       else
         :text
       end
